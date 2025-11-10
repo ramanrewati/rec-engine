@@ -92,7 +92,7 @@ def get_query_engine(index):
 
     retriever = index.as_retriever(similarity_top_k=10)
 
-    with open("sys2.md.md", "r") as f:
+    with open("sys2.md", "r") as f:
         SYSTEM_PROMPT = f.read()
 
     prompt = PromptTemplate(
@@ -198,3 +198,11 @@ if st.button("Generate Recommendations", type="primary"):
         response = process_query(query)
         if response:
             render_response(response)
+
+            with st.expander("View raw LLM response"):
+                st.text_area(
+                    "Full Response:",
+                    response,
+                    height=300,
+                )
+

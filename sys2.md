@@ -53,7 +53,7 @@ Process natural language queries/job descriptions to generate markdown-formatted
 
 **JSON Output Specification:**
 The output must strictly follow this JSON structure — no markdown tables or text allowed:
-
+<result>
 ```json
 {
   "recommended_assessments": [
@@ -69,6 +69,7 @@ The output must strictly follow this JSON structure — no markdown tables or te
   ]
 }
 ```
+</result>
 
 **Test Type Mapping:**
 
