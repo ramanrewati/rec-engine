@@ -92,7 +92,7 @@ def get_query_engine(index):
 
     retriever = index.as_retriever(similarity_top_k=10)
 
-    with open("system_prompt.md", "r") as f:
+    with open("sys2.md.md", "r") as f:
         SYSTEM_PROMPT = f.read()
 
     prompt = PromptTemplate(
