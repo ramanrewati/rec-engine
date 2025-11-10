@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: flask-api
+    env: python
+    buildCommand: uv sync
+    startCommand: uv run python api.py
+    plan: free
+    envVars:
+      - key: PORT
+        value: 10000
